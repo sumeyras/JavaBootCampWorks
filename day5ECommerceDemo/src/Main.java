@@ -30,7 +30,6 @@ public class Main {
 		LoginService login1 =new LoginManager(new UserValidateManager(), new XUserDao());
 		login1.signIn(user1.geteMail(), user1.getPassword());
 		
-		
 	}
 
 }
