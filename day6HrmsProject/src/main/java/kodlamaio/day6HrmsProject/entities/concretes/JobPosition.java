@@ -10,24 +10,24 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "job_categories")
-public class JobCategory {
+@Table(name = "job_positions")
+public class JobPosition {
 
 	@Id
 	@GeneratedValue
 	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "category_name")
-	private String categoryName;
+	@Column(name = "position_name")
+	private String positionName;
 	
 	
-	public JobCategory() {}
+	public JobPosition() {}
 
-	public JobCategory(int id, String categoryName) {
+	public JobPosition(int id, String positionName) {
 		super();
 		this.id = id;
-		this.categoryName = categoryName;
+		this.positionName = positionName;
 	}
 
 
