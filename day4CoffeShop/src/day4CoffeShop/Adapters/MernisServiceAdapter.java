@@ -21,6 +21,7 @@ public class MernisServiceAdapter implements ICustomerCheckService{
 			
 			System.out.println("Not a Valid person");
 		}
-		return result;}
+		return result;
+	}
 
 }
