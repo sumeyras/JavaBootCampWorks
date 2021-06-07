@@ -19,7 +19,7 @@ public class MernisServiceAdapter implements ICustomerCheckService{
 		
 		} catch ( RemoteException e) {
 			
-			System.out.println("Not a Valid person");
+			System.out.println("Invalid user");
 		}
 		return result;
 	}
