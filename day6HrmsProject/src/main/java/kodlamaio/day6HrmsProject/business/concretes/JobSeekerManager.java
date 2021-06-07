@@ -72,10 +72,10 @@ public class JobSeekerManager implements JobSeekerService {
 		if(!controlField(jobSeeker)) {
 			return new ErrorResult("Mandatory fields must be filled");
 		}
-		//TO DO: Mernis Servis Hatası
-		/*if(!checkMernisService.checkIfRealPerson(jobSeeker.getNationalIdentity(), jobSeeker.getFirstName(), jobSeeker.getLastName(), jobSeeker.getYearOfBirth())){
+		
+		if(!checkMernisService.checkIfRealPerson(jobSeeker.getNationalIdentity(), jobSeeker.getFirstName(), jobSeeker.getLastName(), jobSeeker.getYearOfBirth())){
 			return new ErrorResult("Invalid User by Mernis Service");
-		}*/
+		}
 		
 		if(!notExistEmailInDb(jobSeeker.getEmail()).isSuccess()) {
 			return new ErrorResult("Exist mail in db");
