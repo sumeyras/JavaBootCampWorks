@@ -4,11 +4,12 @@ import java.util.List;
 
 import kodlamaio.day6HrmsProject.core.utilities.results.DataResult;
 import kodlamaio.day6HrmsProject.core.utilities.results.Result;
-import kodlamaio.day6HrmsProject.entities.concretes.JobPosition;
+import kodlamaio.day6HrmsProject.entities.concretes.JobSeeker;
 
-public interface JobPositionService {
+public interface JobSeekerService {
 	
-	DataResult<List<JobPosition>> getAll();
-	Result add(JobPosition jobPosition);
+	Result register(JobSeeker jobSeeker);
+	DataResult<List<JobSeeker>> getAll();
 	
+
 }
