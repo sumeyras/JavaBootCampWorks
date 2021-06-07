@@ -11,3 +11,9 @@ Ardından projeye sağ tıklayıp Properties>Java Build Path>Libraries(üst men�
 
 Dosya linki
 https://cdn.discordapp.com/attachments/794909347750084638/841041481925263360/MERSISjar.rar
+
+****SOLVED****
+proje sağ tık --> properties--> java build path --> libraries --> jar dosyalarını silin(Maven dependencies ve JRE System.. dosyaları hariç)
+Gönderdiğim jar dosyalarını add external jars kısmından ekleyin (ya da projeye kalsör ekleyip add jar şeklinde de yapabilirsiniz)
+proje sağ tık --> properties--> java compeiler 1.8 ayarlanmalı ve Use --release option seçeneği işaretlenmeli
+Eğer koddaki özellikleri kullanamama sorunu çıkarsa java sürümünü 15'e ayarlamayı deneyebilirsiniz.
