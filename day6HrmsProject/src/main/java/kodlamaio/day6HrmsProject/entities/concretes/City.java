@@ -8,29 +8,29 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.*;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
 @Entity
-@Table(name = "job_positions")
+@Table(name = "cities")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobAdvertisements"})
 
-public class JobPosition {
-
+public class City {
+	
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "position_name")
-	private String positionName;
-	
+	@Column(name = "city_name")
+	private String cityName;
 	
 	//İlişkilendirme
 	
-	@OneToMany(mappedBy = "jobPosition")
+	@OneToMany(mappedBy = "city")
 	private List<JobAdvertisement> jobAdvertisements;
-	
 
 }
