@@ -68,16 +68,13 @@ public class JobAdvertisementManager implements JobAdvertisementService{
 
 
 
-
 	@Override
 	public DataResult<List<JobAdvertisement>> getAllByDateDesc() {
-		
 		
 		Sort sort = Sort.by(Sort.Direction.DESC, "createdAt");
 
 		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActiveTrue(sort), "DESC");
 	}
-
 
 
 
@@ -89,8 +86,7 @@ public class JobAdvertisementManager implements JobAdvertisementService{
 		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActiveTrue(sort), "ASC");
 	}
 
-
-
+	
 
 	@Override
 	public DataResult<List<JobAdvertisementWithEmployerDto>> getJobAdvertisementWithEmployerDetails(String companyName) {
@@ -99,23 +95,13 @@ public class JobAdvertisementManager implements JobAdvertisementService{
 	}
 
 
+	
 	@Override
 	public Result updateDeactivateJobAdvertisement(int id) {
 
-		
 		this.jobAdvertisementDao.updateDeactivateJobAdvertisement(id);
 		return new SuccesResult("Güncellendi");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
