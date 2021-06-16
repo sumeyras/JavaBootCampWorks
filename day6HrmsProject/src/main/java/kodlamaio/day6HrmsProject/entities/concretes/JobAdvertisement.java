@@ -55,7 +55,6 @@ public class JobAdvertisement {
 	@Column(name = "is_active")
 	private boolean isActive;
 	
-	
 	//İlişkilendirme yapılacak tablolar
 	
 	@ManyToOne()
