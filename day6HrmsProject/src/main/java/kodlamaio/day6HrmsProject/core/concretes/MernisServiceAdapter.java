@@ -1,9 +1,10 @@
-package kodlamaio.day6HrmsProject.core.adapters;
+package kodlamaio.day6HrmsProject.core.concretes;
 
 import java.rmi.RemoteException;
 
 import org.springframework.stereotype.Service;
 
+import kodlamaio.day6HrmsProject.core.adapters.abstracts.CheckMernisService;
 import tr.gov.nvi.tckimlik.WS.KPSPublicSoapProxy;
 
 @Service

@@ -15,7 +15,7 @@ import kodlamaio.day6HrmsProject.core.utilities.results.Result;
 import kodlamaio.day6HrmsProject.entities.concretes.Employer;
 
 @RestController
-@RequestMapping("/api/employers_controller")
+@RequestMapping("/api/employers")
 public class EmployersController {
 	
 	private EmployerService employerService;

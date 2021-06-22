@@ -1,4 +1,4 @@
-package kodlamaio.day6HrmsProject.core.adapters;
+package kodlamaio.day6HrmsProject.core.adapters.abstracts;
 
 public interface CheckMernisService {
 	

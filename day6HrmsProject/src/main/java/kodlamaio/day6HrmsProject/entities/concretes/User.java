@@ -2,6 +2,8 @@ package kodlamaio.day6HrmsProject.entities.concretes;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.*;
 
 @Data
@@ -12,6 +14,7 @@ import lombok.*;
 
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "users")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","image"})
 public class User {
 	
 	@Id
@@ -25,29 +28,9 @@ public class User {
 	@Column(name = "password")
 	private String password;
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	
+	@OneToOne(mappedBy = "user")
+	private UserImage image;
 
 	
 	

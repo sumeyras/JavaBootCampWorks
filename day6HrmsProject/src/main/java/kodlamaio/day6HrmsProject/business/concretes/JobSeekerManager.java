@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import kodlamaio.day6HrmsProject.business.abstracts.JobSeekerService;
 import kodlamaio.day6HrmsProject.core.Validation.abstracts.ValidationService;
-import kodlamaio.day6HrmsProject.core.adapters.CheckMernisService;
+import kodlamaio.day6HrmsProject.core.adapters.abstracts.CheckMernisService;
 import kodlamaio.day6HrmsProject.core.utilities.results.DataResult;
 import kodlamaio.day6HrmsProject.core.utilities.results.ErrorDataResult;
 import kodlamaio.day6HrmsProject.core.utilities.results.ErrorResult;
