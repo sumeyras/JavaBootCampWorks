@@ -7,6 +7,7 @@ import javax.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.*;
 
@@ -16,6 +17,7 @@ import lombok.*;
 
 @Table(name = "work_experiences")
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobSeeker"})
 public class WorkExperience {
 	
 	@Id

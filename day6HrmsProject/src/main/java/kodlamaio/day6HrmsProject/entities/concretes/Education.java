@@ -8,6 +8,7 @@ import javax.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.*;
 
@@ -18,6 +19,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "educations")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobSeeker"})
 public class Education {
 
 	@Id
@@ -47,13 +49,13 @@ public class Education {
 	
 	
 	
-	public String getEndDate() {
+	/*public String getEndDate() {
 		if (endDate == null) {
 			
 			return "Devam Ediyor";
 		}
 		return endDate.toString();
-	}
+	}*/
 	
 	
 	@ManyToOne()

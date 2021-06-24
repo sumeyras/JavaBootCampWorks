@@ -1,11 +1,16 @@
 package kodlamaio.day6HrmsProject.business.concretes;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import kodlamaio.day6HrmsProject.business.abstracts.EducationService;
+import kodlamaio.day6HrmsProject.core.utilities.results.DataResult;
 import kodlamaio.day6HrmsProject.core.utilities.results.Result;
 import kodlamaio.day6HrmsProject.core.utilities.results.SuccesResult;
+import kodlamaio.day6HrmsProject.core.utilities.results.SuccessDataResult;
 import kodlamaio.day6HrmsProject.dataAccess.abstracts.EducationDao;
 import kodlamaio.day6HrmsProject.entities.concretes.Education;
 
@@ -25,6 +30,16 @@ public class EducationManager implements EducationService{
 	public Result add(Education education) {
 		this.educationDao.save(education);
 		return new SuccesResult("Eğitim bilgileri kaydedildi.");
+	}
+
+
+
+	@Override
+	public DataResult<List<Education>> getAllById(int userId) {
+		
+		Sort sort = Sort.by(Sort.Direction.DESC, "endDate");
+		
+		return new SuccessDataResult<List<Education>>(educationDao.getByJobSeekerId(userId, sort), "Mezuniyet tarihine göre sıralama DESC");
 	}
 
 }
