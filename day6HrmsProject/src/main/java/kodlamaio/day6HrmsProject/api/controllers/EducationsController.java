@@ -34,10 +34,10 @@ public class EducationsController {
 		return this.educationService.add(education);
 	}
 	
-	@GetMapping("/getAllById")
-	public DataResult<List<Education>> getAllByIdDESC(@RequestParam int userId){
+	@GetMapping("/getByResumeJobSeekerIdOrderByEndDateDesc")
+	public DataResult<List<Education>> getByResumeJobSeekerIdOrderByEndDateDesc(@RequestParam int userId){
 		
-		return this.educationService.getAllByIdDESC(userId);
+		return this.educationService.getByResumeJobSeekerIdOrderByEndDateDesc(userId);
 	}
 	
 

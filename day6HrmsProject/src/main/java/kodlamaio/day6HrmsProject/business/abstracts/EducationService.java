@@ -12,5 +12,5 @@ public interface EducationService {
 
 	
 	Result add(Education education);
-	DataResult<List<Education>> getAllByIdDESC(int userId);
+	DataResult<List<Education>> getByResumeJobSeekerIdOrderByEndDateDesc(int userId);
 }

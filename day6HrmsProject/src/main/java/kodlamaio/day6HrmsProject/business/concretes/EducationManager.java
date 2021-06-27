@@ -3,7 +3,6 @@ package kodlamaio.day6HrmsProject.business.concretes;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import kodlamaio.day6HrmsProject.business.abstracts.EducationService;
@@ -35,11 +34,10 @@ public class EducationManager implements EducationService{
 
 
 	@Override
-	public DataResult<List<Education>> getAllByIdDESC(int userId) {
+	public DataResult<List<Education>> getByResumeJobSeekerIdOrderByEndDateDesc(int userId) {
 		
-		Sort sort = Sort.by(Sort.Direction.DESC, "endDate");
 		
-		return new SuccessDataResult<List<Education>>(educationDao.getByResume_JobSeekerId(userId, sort), "Mezuniyet tarihine göre sıralama DESC");
+		return new SuccessDataResult<List<Education>>(educationDao.getByResume_JobSeekerIdOrderByEndDateDesc(userId), "Mezuniyet tarihine göre sıralama DESC");
 	}
 
 }
