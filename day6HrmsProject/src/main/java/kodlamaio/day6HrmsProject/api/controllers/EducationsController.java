@@ -35,9 +35,9 @@ public class EducationsController {
 	}
 	
 	@GetMapping("/getAllById")
-	public DataResult<List<Education>> getAllById(@RequestParam int userId){
+	public DataResult<List<Education>> getAllByIdDESC(@RequestParam int userId){
 		
-		return this.educationService.getAllById(userId);
+		return this.educationService.getAllByIdDESC(userId);
 	}
 	
 

@@ -33,11 +33,11 @@ public class WorkExperienceManager implements WorkExperienceService {
 	}
 
 	@Override
-	public DataResult<List<WorkExperience>> getAllById(int userId) {
+	public DataResult<List<WorkExperience>> getAllByIdDESC(int userId) {
 
 		Sort sort = Sort.by(Sort.Direction.DESC, "endDate");
 		
-		return new SuccessDataResult<List<WorkExperience>>(this.workExperienceDao.getByJobSeekerId(userId, sort), "Tecrübeler tarihe göre sıralanmıştır DESC");
+		return new SuccessDataResult<List<WorkExperience>>(this.workExperienceDao.getByResume_JobSeekerId(userId, sort), "Tecrübeler tarihe göre sıralanmıştır DESC");
 	}
 	
 

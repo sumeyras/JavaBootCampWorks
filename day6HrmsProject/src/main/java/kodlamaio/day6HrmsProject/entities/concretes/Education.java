@@ -7,8 +7,8 @@ import javax.persistence.*;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.*;
 
@@ -19,7 +19,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "educations")
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobSeeker"})
+
 public class Education {
 
 	@Id
@@ -57,10 +57,11 @@ public class Education {
 		return endDate.toString();
 	}*/
 	
-	
+
+	@JsonBackReference
 	@ManyToOne()
-	@JoinColumn(name ="job_seeker_id")
-	private JobSeeker jobSeeker;
+	@JoinColumn(name ="resume_id")
+	private Resume resume;
 	
 }
 	

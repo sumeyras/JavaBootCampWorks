@@ -2,6 +2,9 @@ package kodlamaio.day6HrmsProject.entities.concretes;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.*;
 
 @Data
@@ -10,6 +13,7 @@ import lombok.*;
 
 @Table(name ="skills")
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Skill {
 	
 	@Id
@@ -20,8 +24,9 @@ public class Skill {
 	@Column(name = "skill_name")
 	private String skillName;
 	
+	@JsonBackReference
 	@ManyToOne()
-	@JoinColumn(name ="job_seeker_id")
-	private JobSeeker jobSeeker;
+	@JoinColumn(name ="resume_id")
+	private Resume resume;
 
 }

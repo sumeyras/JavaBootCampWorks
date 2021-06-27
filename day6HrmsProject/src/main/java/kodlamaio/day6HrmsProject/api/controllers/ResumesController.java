@@ -33,10 +33,10 @@ public class ResumesController {
 		return this.resumeService.add(resume);
 	}
 	
-	@GetMapping("/getByJobSeeker_Id")
-	public DataResult<Resume> getByJobSeeker_Id(@RequestParam int jobSeekerId){
+	@GetMapping("/getByJobSeekerId")
+	public DataResult<Resume> getByJobSeekerId(@RequestParam int jobSeekerId){
 		
-		return this.resumeService.getByJobSeeker_Id(jobSeekerId);
+		return this.resumeService.getByJobSeekerId(jobSeekerId);
 	}
 	
 

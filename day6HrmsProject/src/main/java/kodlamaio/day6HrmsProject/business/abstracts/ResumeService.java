@@ -6,7 +6,7 @@ import kodlamaio.day6HrmsProject.entities.concretes.Resume;
 
 public interface ResumeService {
 	
-	/*Result add(Resume resume);
-	DataResult<Resume> getByJobSeeker_Id(int jobSeekerId);*/
+	Result add(Resume resume);
+	DataResult<Resume> getByJobSeekerId(int jobSeekerId);
 
 }

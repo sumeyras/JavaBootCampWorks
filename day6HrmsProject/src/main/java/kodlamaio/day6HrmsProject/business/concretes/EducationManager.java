@@ -35,11 +35,11 @@ public class EducationManager implements EducationService{
 
 
 	@Override
-	public DataResult<List<Education>> getAllById(int userId) {
+	public DataResult<List<Education>> getAllByIdDESC(int userId) {
 		
 		Sort sort = Sort.by(Sort.Direction.DESC, "endDate");
 		
-		return new SuccessDataResult<List<Education>>(educationDao.getByJobSeekerId(userId, sort), "Mezuniyet tarihine göre sıralama DESC");
+		return new SuccessDataResult<List<Education>>(educationDao.getByResume_JobSeekerId(userId, sort), "Mezuniyet tarihine göre sıralama DESC");
 	}
 
 }

@@ -6,6 +6,6 @@ import kodlamaio.day6HrmsProject.entities.concretes.Resume;
 
 public interface ResumeDao extends JpaRepository<Resume, Integer> {
 	
-	//Resume getByJobSeeker_Id(int jobSeekerId);
+	Resume getByJobSeekerId(int jobSeekerId);
 
 }

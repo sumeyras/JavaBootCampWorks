@@ -9,6 +9,6 @@ import kodlamaio.day6HrmsProject.entities.concretes.WorkExperience;
 public interface WorkExperienceService {
 	
 	Result add(WorkExperience workExperience);
-	DataResult<List<WorkExperience>> getAllById(int userId);
+	DataResult<List<WorkExperience>> getAllByIdDESC(int userId);
 
 }

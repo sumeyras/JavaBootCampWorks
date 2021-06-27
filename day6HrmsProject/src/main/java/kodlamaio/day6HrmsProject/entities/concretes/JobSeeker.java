@@ -1,10 +1,11 @@
 package kodlamaio.day6HrmsProject.entities.concretes;
 
-import java.util.List;
+
 
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.*;
 
@@ -15,8 +16,9 @@ import lombok.*;
 
 @PrimaryKeyJoinColumn(name = "user_id", referencedColumnName = "id")
 @Table(name = "job_seekers")
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","resume","coverLetters","educations","jobExperiences","languages","skills","webSites"})
+
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class JobSeeker extends User{
 	
 	@Column(name = "first_name")
@@ -31,26 +33,10 @@ public class JobSeeker extends User{
 	@Column(name = "year_of_birth")
 	private String yearOfBirth;
 	
-	@OneToMany(mappedBy = "jobSeeker")
-	private List<CoverLetter> coverLetters;
-	
-	@OneToMany(mappedBy = "jobSeeker")
-	private List<Education> educations;
-	
-	@OneToMany(mappedBy = "jobSeeker")
-	private List<WorkExperience> jobExperiences;
-	
-	@OneToMany(mappedBy = "jobSeeker")
-	private List<Language> languages;
-	
-	@OneToMany(mappedBy = "jobSeeker")
-	private List<Skill> skills;
-	
-	@OneToMany(mappedBy = "jobSeeker")
-	private List<Website> webSites;
-	
-	/*@OneToOne(mappedBy = "jobSeeker")
-	private Resume resume;*/
+
+	@JsonManagedReference
+	@OneToOne(mappedBy = "jobSeeker")
+	private Resume resume;
 	
 
 }

@@ -14,7 +14,7 @@ import kodlamaio.day6HrmsProject.entities.concretes.Resume;
 @Service
 public class ResumeManager implements ResumeService {
 
-	/*private ResumeDao resumeDao;
+	private ResumeDao resumeDao;
 	
 	@Autowired
 	public ResumeManager(ResumeDao resumeDao) {
@@ -32,10 +32,10 @@ public class ResumeManager implements ResumeService {
 
 
 	@Override
-	public DataResult<Resume> getByJobSeeker_Id(int jobSeekerId) {
+	public DataResult<Resume> getByJobSeekerId(int jobSeekerId) {
 		
-		return new SuccessDataResult<Resume>(this.resumeDao.getByJobSeeker_Id(jobSeekerId), "Cv görüntülendi");
+		return new SuccessDataResult<Resume>(this.resumeDao.getByJobSeekerId(jobSeekerId), "Cv görüntülendi");
 	}
 
-*/
+
 }

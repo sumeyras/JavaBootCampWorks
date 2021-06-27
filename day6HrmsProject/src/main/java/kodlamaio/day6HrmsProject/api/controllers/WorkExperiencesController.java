@@ -34,10 +34,10 @@ public class WorkExperiencesController {
 		
 	}
 	
-	@GetMapping("/getAllById")
-	public DataResult<List<WorkExperience>> getAllById(@RequestParam int userId){
+	@GetMapping("/getAllByIdDESC")
+	public DataResult<List<WorkExperience>> getAllByIdDESC(@RequestParam int userId){
 		
-		return this.workExperienceService.getAllById(userId);
+		return this.workExperienceService.getAllByIdDESC(userId);
 	}
 	
 	

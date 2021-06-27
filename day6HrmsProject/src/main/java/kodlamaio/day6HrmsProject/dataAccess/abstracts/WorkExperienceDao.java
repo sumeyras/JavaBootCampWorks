@@ -9,6 +9,6 @@ import kodlamaio.day6HrmsProject.entities.concretes.WorkExperience;
 
 public interface WorkExperienceDao extends JpaRepository<WorkExperience, Integer>{
 
-	//TO DO:  Tecrübeler tarih olarak -> DESC
-	List<WorkExperience> getByJobSeekerId(int userId, Sort sort);
+	//TO DO:  Tecrübeler tarih olarak -> DESC -- DONE
+	List<WorkExperience> getByResume_JobSeekerId(int userId, Sort sort);
 }
